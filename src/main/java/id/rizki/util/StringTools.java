@@ -4,7 +4,7 @@ package id.rizki.util;
  * @author: Dhanan_Simian <dhanan.dwi@simian.co.id>
  * @since: 5 Oct 2022
  */
-public class StringUtils {
+public class StringTools {
     public static String ifEmpty(String check) {
         String result = check == null ? "" : check;
         return result;
