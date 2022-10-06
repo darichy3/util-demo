@@ -11,6 +11,14 @@
         <java.version>1.8</java.version>
     </properties>
 
+    <repositories>
+        <!-- repo from local folder -->
+        <repository>
+            <id>local-maven-repo</id>
+            <url>file://${basedir}/src/main/resources/extlib</url>
+        </repository>
+    </repositories>
+
     <distributionManagement>
         <repository>
             <id>github</id>
@@ -18,6 +26,21 @@
             <url>https://maven.pkg.github.com/darichy3/util-demo</url>
         </repository>
     </distributionManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>local.repo</groupId>
+            <artifactId>fmt-local</artifactId>
+            <version>1.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>local.repo</groupId>
+            <artifactId>velocity-local</artifactId>
+            <version>1.0</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
